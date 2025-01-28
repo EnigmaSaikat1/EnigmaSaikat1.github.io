@@ -1,778 +1,778 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saikat Das - Quality Analyst - I</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
-    <style>
-        :root {
-            --primary: #3b82f6;
-            --primary-dark: #1d4ed8;
-            --secondary: #64748b;
-            --text: #1f2937;
-            --bg: #ffffff;
-            --light-bg: #f8fafc;
-            --accent: #7c3aed;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-        }
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saikat Das - QA Engineer Portfolio</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+        <style>
+            :root {
+                --primary: #3b82f6;
+                --primary-dark: #1d4ed8;
+                --secondary: #64748b;
+                --text: #1f2937;
+                --bg: #ffffff;
+                --light-bg: #f8fafc;
+                --accent: #7c3aed;
+                --gray-100: #f3f4f6;
+                --gray-200: #e5e7eb;
+                --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+                --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+                --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+            body {
+                background-color: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+            }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
 
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 4rem 0;
-            margin-bottom: 2rem;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .profile-info h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .profile-info p {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        .main-content {
-            padding: 2rem 0;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-            background: var(--light-bg);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-        }
-
-        .section h2 {
-            color: var(--primary-dark);
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-item {
-            background: white;
-            padding: 1.2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            border: 1px solid var(--gray-200);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .skill-item:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary);
-        }
-
-        .skill-item i {
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        .experience-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        .experience-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .experience-title h3 {
-            color: var(--primary-dark);
-            font-size: 1.4rem;
-        }
-
-        .experience-company {
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .experience-period {
-            color: var(--secondary);
-            font-weight: 500;
-            background: var(--gray-100);
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-        }
-
-        .education {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s ease;
-        }
-
-        .education:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        .education h3 {
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .education p {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .section {
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-           /* Add these new styles to your existing CSS */
-           .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary);
-        }
-
-        .project-title {
-            color: var(--primary-dark);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .project-description {
-            color: var(--text);
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-tag {
-            background: var(--gray-100);
-            color: var(--secondary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-links a {
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--primary-dark);
-        }
-
-        @media (max-width: 768px) {
             header {
-                padding: 3rem 0;
+                background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+                color: white;
+                padding: 4rem 0;
+                margin-bottom: 2rem;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
             }
 
             .header-content {
-                flex-direction: column;
-                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
 
             .profile-info h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .profile-info p {
+                font-size: 1.4rem;
+                opacity: 0.9;
+                margin-bottom: 1.5rem;
             }
 
             .contact-info {
-                justify-content: center;
+                display: flex;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .contact-info a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+                background: rgba(255,255,255,0.1);
+                border-radius: 50px;
+                transition: all 0.3s ease;
+            }
+
+            .contact-info a:hover {
+                background: rgba(255,255,255,0.2);
+                transform: translateY(-2px);
+            }
+
+            .main-content {
+                padding: 2rem 0;
             }
 
             .section {
-                padding: 1.5rem;
+                margin-bottom: 4rem;
+                background: var(--light-bg);
+                padding: 2.5rem;
+                border-radius: 16px;
+                box-shadow: var(--shadow);
+                transition: transform 0.3s ease;
+            }
+
+            .section:hover {
+                transform: translateY(-5px);
+            }
+
+            .section h2 {
+                color: var(--primary-dark);
+                margin-bottom: 2rem;
+                font-size: 2rem;
+                position: relative;
+                padding-bottom: 0.5rem;
+            }
+
+            .section h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 4px;
+                background: var(--accent);
+                border-radius: 2px;
             }
 
             .skills-grid {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .skill-item {
+                background: white;
+                padding: 1.2rem;
+                border-radius: 12px;
+                box-shadow: var(--shadow-sm);
+                transition: all 0.3s ease;
+                border: 1px solid var(--gray-200);
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .skill-item:hover {
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-2px);
+                border-color: var(--primary);
+            }
+
+            .skill-item i {
+                color: var(--accent);
+                font-size: 1.2rem;
+            }
+
+            .experience-item {
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                margin-bottom: 2rem;
+                box-shadow: var(--shadow-sm);
+                border: 1px solid var(--gray-200);
+                transition: all 0.3s ease;
+            }
+
+            .experience-item:hover {
+                box-shadow: var(--shadow-lg);
             }
 
             .experience-title {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
             }
-        }
 
-        footer {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    color: white;
-    padding: 3rem 0 2rem;
-    margin-top: 4rem;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-}
+            .experience-title h3 {
+                color: var(--primary-dark);
+                font-size: 1.4rem;
+            }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
+            .experience-company {
+                font-weight: 600;
+                color: var(--accent);
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+            }
 
-.footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
+            .experience-period {
+                color: var(--secondary);
+                font-weight: 500;
+                background: var(--gray-100);
+                padding: 0.4rem 1rem;
+                border-radius: 50px;
+                font-size: 0.9rem;
+            }
 
-.footer-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-}
+            .education {
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: var(--shadow-sm);
+                border: 1px solid var(--gray-200);
+                transition: all 0.3s ease;
+            }
 
-.footer-links {
-    list-style: none;
-}
+            .education:hover {
+                box-shadow: var(--shadow-lg);
+            }
 
-.footer-links li {
-    margin-bottom: 0.5rem;
-}
+            .education h3 {
+                color: var(--primary-dark);
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+            }
 
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-}
+            .education p {
+                color: var(--secondary);
+                margin-bottom: 0.5rem;
+            }
 
-.footer-links a:hover {
-    color: white;
-    transform: translateX(5px);
-}
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
 
-.footer-social {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
+            .section {
+                animation: fadeIn 0.6s ease forwards;
+            }
 
-.footer-social a {
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
+            /* Add these new styles to your existing CSS */
+            .project-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+                margin-top: 1rem;
+            }
 
-.footer-social a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-}
+            .project-card {
+                background: white;
+                border-radius: 12px;
+                padding: 1.5rem;
+                box-shadow: var(--shadow-sm);
+                border: 1px solid var(--gray-200);
+                transition: all 0.3s ease;
+            }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-}
+            .project-card:hover {
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-2px);
+                border-color: var(--primary);
+            }
 
-@media (max-width: 768px) {
-    footer {
-        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+            .project-title {
+                color: var(--primary-dark);
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .project-description {
+                color: var(--text);
+                margin-bottom: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .project-tag {
+                background: var(--gray-100);
+                color: var(--secondary);
+                padding: 0.25rem 0.75rem;
+                border-radius: 50px;
+                font-size: 0.85rem;
+            }
+
+            .project-links {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .project-links a {
+                color: var(--primary);
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+                font-size: 0.9rem;
+                transition: color 0.3s ease;
+            }
+
+            .project-links a:hover {
+                color: var(--primary-dark);
+            }
+
+            @media (max-width: 768px) {
+                header {
+                    padding: 3rem 0;
+                }
+
+                .header-content {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .profile-info h1 {
+                    font-size: 2.5rem;
+                }
+
+                .contact-info {
+                    justify-content: center;
+                }
+
+                .section {
+                    padding: 1.5rem;
+                }
+
+                .skills-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .experience-title {
+                    flex-direction: column;
+                    gap: 1rem;
+                    text-align: center;
+                }
+            }
+
+            footer {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        color: white;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: 0.5rem;
     }
 
     .footer-section h3::after {
-        left: 50%;
-        transform: translateX(-50%);
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
     }
 
     .footer-links a {
-        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: white;
+        transform: translateX(5px);
     }
 
     .footer-social {
-        justify-content: center;
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
     }
-}
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="profile-info">
-                <h1>Saikat Das</h1>
-                <p>Quality Analyst - I</p>
-                <div class="contact-info">
-                    <a href="tel:891-881-1314">
-                        <i class="fas fa-phone"></i>
-                        891-881-1314
+
+    .footer-social a {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        footer {
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-section h3::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .footer-links a {
+            justify-content: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+    }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container header-content">
+                <div class="profile-info">
+                    <h1>Saikat Das</h1>
+                    <p>Quality Analyst - I</p>
+                    <div class="contact-info">
+                        <a href="tel:891-881-1314">
+                            <i class="fas fa-phone"></i>
+                            891-881-1314
+                        </a>
+                        <a href="mailto:saikat.j.das@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            saikat.j.das@gmail.com
+                        </a>
+                        <a href="https://github.com/EnigmaSaikat1" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/saikat-das1998" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content container">
+            <section class="section">
+                <h2>Profile</h2>
+                <p>A motivated fresher skilled in Automation, Selenium Locators, Selenium WebDriver, and Java Programming. Experienced in developing and executing test plans, test scripts, and exploratory testing. Proficient in manual testing, GIT, MYSQL, and Rest API. Strong problem-solving and analytical skills, with expertise in code reviews and software quality assurance.</p>
+            </section>
+
+            <section class="section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-cogs"></i>
+                        Selenium WebDriver
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        Java Programming
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-vial"></i>
+                        TestNG
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-vial"></i>
+                        Junit
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-vial"></i>
+                        Cucumber
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github"></i>
+                        Github
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        Git
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-bitbucket"></i>
+                        Bitbucket
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        MYSQL
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-jenkins"></i>
+                        Jenkins
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-network-wired"></i>
+                        REST Assured API Testing
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-paper-plane"></i>
+                        Postman
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-fish"></i>
+                        Docker
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Load testing with JMeter
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-tasks"></i>
+                        Test Planning
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-bug"></i>
+                        Jira
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-bug"></i>
+                        Zoho
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-title">
+                        <h3>Quality Analyst - I</h3>
+                        <span class="experience-period">MAR 2024 – Present</span>
+                    </div>
+                    <div class="experience-company">RISKSUCCESS PRIVATE LIMITED (iRM)</div>
+                    <p>Spearheading the automation testing initiatives for iRM tools using Java Selenium, with a primary focus on ensuring the robustness and reliability of the software. Establishing and maintaining CI/CD pipelines with Jenkins tailored specifically for iRM projects. Also implemented successful API testing with Postman. Integrating automated tests seamlessly into the development lifecycle to enhance efficiency.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        <h3>Quality Analyst</h3>
+                        <span class="experience-period">DEC 2023 – MAR 2024</span>
+                    </div>
+                    <div class="experience-company">RISKSUCCESS PRIVATE LIMITED (iRM)</div>
+                    <p>Managed automation testing using Java Selenium to ensure reliable and efficient tools. Performed thorough API testing to ensure smooth functionality and conducted load testing with Apache JMeter. Set up and maintained CI/CD pipelines, integrated automated tests into the development process, and handled Jenkins server configurations to automate test execution and deployments.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        <h3>Quality Engineer Associate</h3>
+                        <span class="experience-period">JUL 2021 – MAR 2023</span>
+                    </div>
+                    <div class="experience-company">ACCENTURE INDIA</div>
+                    <p>Created detailed test scenarios and test cases based on functional specifications. Estimated effort required for test activities including test design and execution. Performed system testing, system integration testing, regression testing, and user acceptance testing. Collaborated with development teams to identify and resolve defects.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education">
+                    <h3>Bachelor of Technology, Computer Science and Engineering</h3>
+                    <p>UNIVERSITY OF ENGINEERING AND MANAGEMENT, JAIPUR</p>
+                    <p>2017 – 2021</p>
+                </div>
+            </section>
+        </main>
+    <!-- Add this section before the Education section -->
+    <section class="section">
+        <h2>GitHub Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-title">
+                    <i class="fas fa-code"></i>
+                    RestAssured Automation Framework
+                </div>
+                <p class="project-description">
+                    A robust test automation framework built with RestAssured and Java, with Data-Driven testing approaches.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">RestAssured</span>
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">TestNG</span>
+                    <span class="project-tag">Maven</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/EnigmaSaikat1/RestAssured-Automation-Framework" target="_blank">
+                        <i class="fab fa-github"></i> View Code
                     </a>
-                    <a href="mailto:saikat.j.das@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                        saikat.j.das@gmail.com
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">
+                    <i class="fas fa-network-wired"></i>
+                    EnigmaSaikat1.github.io [Personal Portfolio]
+                </div>
+                <p class="project-description">
+                    EnigmaSaikat1.github.io is a personal portfolio highlighting my expertise in software testing, including manual, automation, and performance testing projects.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">HTML 5</span>
+                    <span class="project-tag">CSS</span>
+                    <span class="project-tag">Javascript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/EnigmaSaikat1/EnigmaSaikat1.github.io" target="_blank">
+                        <i class="fab fa-github"></i> View Code
                     </a>
+                </div>
+            </div> 
+
+            <!-- <div class="project-card">
+                <div class="project-title">
+                    <i class="fas fa-vial"></i>
+                    BDD Test Automation
+                </div>
+                <p class="project-description">
+                    Behavior-Driven Development test automation project using Cucumber with Java, demonstrating end-to-end testing scenarios.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Cucumber</span>
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">Selenium</span>
+                    <span class="project-tag">Gherkin</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/EnigmaSaikat1/cucumber-bdd-framework" target="_blank">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="footer-section">
+                <h3>Quick Links</h3> -->
+                <!-- <ul class="footer-links">
+                    <li>
+                        <a href="#profile">
+                            <i class="fas fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills">
+                            <i class="fas fa-tools"></i>
+                            Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience">
+                            <i class="fas fa-briefcase"></i>
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            <i class="fas fa-code"></i>
+                            Projects
+                        </a>
+                    </li>
+                </ul> 
+            </div> -->
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="tel:891-881-1314">
+                            <i class="fas fa-phone"></i>
+                            891-881-1314
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:saikat.j.das@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            saikat.j.das@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps?q=Kolkata,India" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Kolkata, India
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Me</h3>
+                <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8);">
+                    Let's connect and discuss potential opportunities for collaboration.
+                </p>
+                <div class="footer-social">
                     <a href="https://github.com/EnigmaSaikat1" target="_blank">
                         <i class="fab fa-github"></i>
-                        GitHub
                     </a>
                     <a href="https://linkedin.com/in/saikat-das1998" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
+                    <a href="https://twitter.com/yourusername" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <!-- <a href="https://medium.com/@yourusername" target="_blank">
+                        <i class="fab fa-medium-m"></i>
+                    </a> -->
                 </div>
             </div>
         </div>
-    </header>
 
-    <main class="main-content container">
-        <section class="section">
-            <h2>Profile</h2>
-            <p>A motivated fresher skilled in Automation, Selenium Locators, Selenium WebDriver, and Java Programming. Experienced in developing and executing test plans, test scripts, and exploratory testing. Proficient in manual testing, GIT, MYSQL, and Rest API. Strong problem-solving and analytical skills, with expertise in code reviews and software quality assurance.</p>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-cogs"></i>
-                    Selenium WebDriver
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-java"></i>
-                    Java Programming
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-vial"></i>
-                    TestNG
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-vial"></i>
-                    Junit
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-vial"></i>
-                    Cucumber
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-git-alt"></i>
-                    Git
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-git-alt"></i>
-                    Github
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-bitbucket"></i>
-                    Bitbucket
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    MYSQL
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-jenkins"></i>
-                    Jenkins
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-network-wired"></i>
-                    REST Assured API Automation
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-paper-plane"></i>
-                    Postman
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-fish"></i>
-                    Docker
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-tachometer-alt"></i>
-                    Load testing with JMeter
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-tasks"></i>
-                    Test Planning
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-bug"></i>
-                    Jira
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-bug"></i>
-                    Zoho
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <div class="experience-title">
-                    <h3>Quality Analyst - I</h3>
-                    <span class="experience-period">MAR 2024 – Present</span>
-                </div>
-                <div class="experience-company">RISKSUCCESS PRIVATE LIMITED (iRM)</div>
-                <p>Spearheading the automation testing initiatives for iRM tools using Java Selenium, with a primary focus on ensuring the robustness and reliability of the software. Establishing and maintaining CI/CD pipelines with Jenkins tailored specifically for iRM projects. Also implemented successful API testing with Postman. Integrating automated tests seamlessly into the development lifecycle to enhance efficiency.</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-title">
-                    <h3>Quality Analyst</h3>
-                    <span class="experience-period">DEC 2023 – MAR 2024</span>
-                </div>
-                <div class="experience-company">RISKSUCCESS PRIVATE LIMITED (iRM)</div>
-                <p>Managed automation testing using Java Selenium to ensure reliable and efficient tools. Performed thorough API testing to ensure smooth functionality and conducted load testing with Apache JMeter. Set up and maintained CI/CD pipelines, integrated automated tests into the development process, and handled Jenkins server configurations to automate test execution and deployments.</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-title">
-                    <h3>Quality Engineer Associate</h3>
-                    <span class="experience-period">JUL 2021 – MAR 2023</span>
-                </div>
-                <div class="experience-company">ACCENTURE INDIA</div>
-                <p>Created detailed test scenarios and test cases based on functional specifications. Estimated effort required for test activities including test design and execution. Performed system testing, system integration testing, regression testing, and user acceptance testing. Collaborated with development teams to identify and resolve defects.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <div class="education">
-                <h3>Bachelor of Technology (B.Tech), Computer Science and Engineering (CSE)</h3>
-                <p>UNIVERSITY OF ENGINEERING AND MANAGEMENT, JAIPUR</p>
-                <p>2017 – 2021</p>
-            </div>
-        </section>
-    </main>
-<!-- Add this section before the Education section -->
-<section class="section">
-    <h2>GitHub Projects</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <div class="project-title">
-                <i class="fas fa-code"></i>
-                RestAssured Automation Framework
-            </div>
-            <p class="project-description">
-                A robust test automation framework built with RestAssured and Java, with Data-Driven testing approaches.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">RestAssured</span>
-                <span class="project-tag">Java</span>
-                <span class="project-tag">TestNG</span>
-                <span class="project-tag">Maven</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/EnigmaSaikat1/RestAssured-Automation-Framework" target="_blank">
-                    <i class="fab fa-github"></i> View Code
-                </a>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Saikat Das. All rights reserved.</p>
         </div>
-
-        <div class="project-card">
-            <div class="project-title">
-                <i class="fas fa-network-wired"></i>
-                EnigmaSaikat1.github.io [Personal Portfolio]
-            </div>
-            <p class="project-description">
-                EnigmaSaikat1.github.io is a personal portfolio highlighting my expertise in software testing, including manual, automation, and performance testing projects.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">HTML 5</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">Javascript</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/EnigmaSaikat1/EnigmaSaikat1.github.io" target="_blank">
-                    <i class="fab fa-github"></i> View Code
-                </a>
-            </div>
-        </div> 
-
-        <!-- <div class="project-card">
-            <div class="project-title">
-                <i class="fas fa-vial"></i>
-                BDD Test Automation
-            </div>
-            <p class="project-description">
-                Behavior-Driven Development test automation project using Cucumber with Java, demonstrating end-to-end testing scenarios.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">Cucumber</span>
-                <span class="project-tag">Java</span>
-                <span class="project-tag">Selenium</span>
-                <span class="project-tag">Gherkin</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/EnigmaSaikat1/cucumber-bdd-framework" target="_blank">
-                    <i class="fab fa-github"></i> View Code
-                </a>
-            </div>
-        </div> -->
-    </div>
-</section>
-<footer>
-    <div class="footer-content">
-        <!-- <div class="footer-section">
-             <h3>Quick Links</h3> -->
-            <!-- <ul class="footer-links">
-                <li>
-                    <a href="#profile">
-                        <i class="fas fa-user"></i>
-                        Profile
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills">
-                        <i class="fas fa-tools"></i>
-                        Skills
-                    </a>
-                </li>
-                <li>
-                    <a href="#experience">
-                        <i class="fas fa-briefcase"></i>
-                        Experience
-                    </a>
-                </li>
-                <li>
-                    <a href="#projects">
-                        <i class="fas fa-code"></i>
-                        Projects
-                    </a>
-                </li>
-            </ul> 
-        </div> -->
-
-        <div class="footer-section">
-            <h3>Contact Info</h3>
-            <ul class="footer-links">
-                <li>
-                    <a href="tel:891-881-1314">
-                        <i class="fas fa-phone"></i>
-                        891-881-1314
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:saikat.j.das@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                        saikat.j.das@gmail.com
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.google.com/maps?q=Kolkata,India" target="_blank">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Kolkata, India
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Connect With Me</h3>
-            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8);">
-                Let's connect and discuss potential opportunities for collaboration.
-            </p>
-            <div class="footer-social">
-                <a href="https://github.com/EnigmaSaikat1" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/saikat-das1998" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://twitter.com/yourusername" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <!-- <a href="https://medium.com/@yourusername" target="_blank">
-                    <i class="fab fa-medium-m"></i>
-                </a> -->
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2025 Saikat Das. All rights reserved.</p>
-    </div>
-</footer>
-    <script>
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+    </footer>
+        <script>
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
 
-        // Add scroll reveal animation
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            // Add scroll reveal animation
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
             });
-        });
 
-        sections.forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(20px)';
-            observer.observe(section);
-        });
-    </script>
-</body>
-</html>
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                observer.observe(section);
+            });
+        </script>
+    </body>
+    </html>
