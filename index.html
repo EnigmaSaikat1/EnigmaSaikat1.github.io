@@ -230,6 +230,79 @@
             animation: fadeIn 0.6s ease forwards;
         }
 
+           /* Add these new styles to your existing CSS */
+           .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .project-title {
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tag {
+            background: var(--gray-100);
+            color: var(--secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-links a:hover {
+            color: var(--primary-dark);
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 3rem 0;
@@ -262,6 +335,119 @@
                 text-align: center;
             }
         }
+
+        footer {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: white;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    footer {
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -311,11 +497,23 @@
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-vial"></i>
-                    TestNG, Junit, Cucumber
+                    TestNG
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-vial"></i>
+                    Junit
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-vial"></i>
+                    Cucumber
                 </div>
                 <div class="skill-item">
                     <i class="fab fa-git-alt"></i>
-                    GIT, Bitbucket
+                    Github
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-bitbucket"></i>
+                    Bitbucket
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-database"></i>
@@ -334,8 +532,12 @@
                     Postman
                 </div>
                 <div class="skill-item">
+                    <i class="fas fa-fish"></i>
+                    Docker
+                </div>
+                <div class="skill-item">
                     <i class="fas fa-tachometer-alt"></i>
-                    Load testing (JMeter)
+                    Load testing with JMeter
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-tasks"></i>
@@ -343,7 +545,11 @@
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-bug"></i>
-                    Jira and Zoho
+                    Jira
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-bug"></i>
+                    Zoho
                 </div>
             </div>
         </section>
@@ -387,7 +593,155 @@
             </div>
         </section>
     </main>
+<!-- Add this section before the Education section -->
+<section class="section">
+    <h2>GitHub Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="project-title">
+                <i class="fas fa-code"></i>
+                RestAssured Automation Framework
+            </div>
+            <p class="project-description">
+                A robust test automation framework built with RestAssured and Java, with Data-Driven testing approaches.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">RestAssured</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">TestNG</span>
+                <span class="project-tag">Maven</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EnigmaSaikat1/RestAssured-Automation-Framework" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
 
+        <div class="project-card">
+            <div class="project-title">
+                <i class="fas fa-network-wired"></i>
+                EnigmaSaikat1.github.io [Personal Portfolio]
+            </div>
+            <p class="project-description">
+                EnigmaSaikat1.github.io is a personal portfolio highlighting my expertise in software testing, including manual, automation, and performance testing projects.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">HTML 5</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">Javascript</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EnigmaSaikat1/EnigmaSaikat1.github.io" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div> 
+
+        <!-- <div class="project-card">
+            <div class="project-title">
+                <i class="fas fa-vial"></i>
+                BDD Test Automation
+            </div>
+            <p class="project-description">
+                Behavior-Driven Development test automation project using Cucumber with Java, demonstrating end-to-end testing scenarios.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">Cucumber</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Selenium</span>
+                <span class="project-tag">Gherkin</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EnigmaSaikat1/cucumber-bdd-framework" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div> -->
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <!-- <div class="footer-section">
+             <h3>Quick Links</h3> -->
+            <!-- <ul class="footer-links">
+                <li>
+                    <a href="#profile">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills">
+                        <i class="fas fa-tools"></i>
+                        Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <i class="fas fa-code"></i>
+                        Projects
+                    </a>
+                </li>
+            </ul> 
+        </div> -->
+
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+                <li>
+                    <a href="tel:891-881-1314">
+                        <i class="fas fa-phone"></i>
+                        891-881-1314
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:saikat.j.das@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        saikat.j.das@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps?q=Kolkata,India" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Kolkata, India
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect With Me</h3>
+            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8);">
+                Let's connect and discuss potential opportunities for collaboration.
+            </p>
+            <div class="footer-social">
+                <a href="https://github.com/EnigmaSaikat1" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/saikat-das1998" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- <a href="https://medium.com/@yourusername" target="_blank">
+                    <i class="fab fa-medium-m"></i>
+                </a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Saikat Das. All rights reserved.</p>
+    </div>
+</footer>
     <script>
         // Add smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
